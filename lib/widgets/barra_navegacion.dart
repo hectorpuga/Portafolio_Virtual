@@ -20,7 +20,7 @@ class BarraDeNavegacion extends StatelessWidget {
       controller: _controller,
       theme: ThemeNavigationBarra.buttonNavigation,
       extendedTheme: const SidebarXTheme(
-        width: 140,
+        width: 180,
         decoration: BoxDecoration(
           color: canvasColor,
         ),
