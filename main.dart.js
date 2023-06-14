@@ -58007,7 +58007,7 @@ $S:0}
 A.xn.prototype={
 P(a){var s=null,r=A.d7(a,s,t.w).w,q=$.abp(),p=$.acs()
 r=A.fl(s,r.a.b*0.1,s)
-return new A.tn(q,B.E5,A.b([new A.lp("Inicio",A.fl(A.PM("assets/inicio.png"),30,30),new A.LH()),new A.lp("Proyectos",A.fl(A.PM("assets/proyectos.png"),30,30),new A.LI(this)),new A.lp("Tecnologias",A.fl(A.PM("assets/tecnologias.png"),30,30),s),new A.lp("Acerca demi",A.fl(A.PM("assets/acerca_de_mi.png"),30,30),s)],t.zA),this.c,r,p,s)}}
+return new A.tn(q,B.E5,A.b([new A.lp("Inicio",A.fl(A.PM("assets/inicio.png"),30,30),new A.LH()),new A.lp("Proyectos",A.fl(A.PM("assets/proyectos.png"),30,30),new A.LI(this)),new A.lp("Tecnologias",A.fl(A.PM("assets/tecnologias.png"),30,30),s),new A.lp("Acerca de mi",A.fl(A.PM("assets/acerca_de_mi.png"),30,30),s)],t.zA),this.c,r,p,s)}}
 A.LH.prototype={
 $0(){A.a2q().$1("Home")},
 $S:7}
@@ -62205,7 +62205,7 @@ B.E4=new A.cj(B.Bl,t.kI)
 B.Be=new A.bt([B.av,null,B.ok,null,B.ol,null],A.a8("bt<h6,aG>"))
 B.tm=new A.cj(B.Be,A.a8("cj<h6>"))
 B.uX=new A.dY(B.d2,null,null,null,null,null,null,B.ao)
-B.E5=new A.Cn(140,1/0,B.ai,B.ai,B.uX,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.E5=new A.Cn(180,1/0,B.ai,B.ai,B.uX,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.tq=new A.a9(B.ar,!1,!0,!1,!1)
 B.tn=new A.a9(B.aj,!1,!0,!1,!1)
 B.to=new A.a9(B.ak,!1,!0,!1,!1)
