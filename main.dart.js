@@ -58007,9 +58007,14 @@ A.Pt.prototype={
 $0(){},
 $S:0}
 A.xm.prototype={
-P(a){var s=null,r=A.d7(a,s,t.w).w,q=$.abp(),p=A.bZ(0,200),o=$.acs()
-r=A.fl(s,r.a.b*0.1,s)
-return new A.to(q,B.E5,A.b([new A.lp("Inicio",A.fl(A.PM("assets/inicio.png"),30,30),new A.LH()),new A.lp("Proyectos",A.fl(A.PM("assets/proyectos.png"),30,30),new A.LI()),new A.lp("Tecnologias",A.fl(A.PM("assets/tecnologias.png"),30,30),s),new A.lp("Acerca de mi",A.fl(A.PM("assets/acerca_de_mi.png"),30,30),s)],t.zA),this.c,r,o,p,s)}}
+P(a){var s,r,q,p,o=null,n=A.d7(a,o,t.w).w,m=this.c,l=$.abp(),k=A.bZ(0,80),j=$.acs()
+n=A.fl(o,n.a.b*0.1,o)
+s=A.fl(A.PM("assets/inicio.png"),30,30)
+r=m.b
+q=r?"":"Inicio"
+p=A.fl(A.PM("assets/proyectos.png"),30,30)
+r=r?"":"Proyectos"
+return new A.to(l,B.E5,A.b([new A.lp(q,s,new A.LH()),new A.lp(r,p,new A.LI()),new A.lp("Tecnologias",A.fl(A.PM("assets/tecnologias.png"),30,30),o),new A.lp("Acerca de mi",A.fl(A.PM("assets/acerca_de_mi.png"),30,30),o)],t.zA),m,n,j,k,o)}}
 A.LH.prototype={
 $0(){},
 $S:7}
