@@ -4,7 +4,7 @@ class AppTheme {
   static final appTheme = ThemeData.light().copyWith(
       textTheme: const TextTheme(
           titleLarge: TextStyle(
-              fontSize: 40, color: Colors.black, fontWeight: FontWeight.bold),
+              fontSize: 70, color: Colors.black, fontWeight: FontWeight.bold),
           bodySmall: TextStyle(color: Colors.black)),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
