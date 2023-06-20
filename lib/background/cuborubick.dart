@@ -32,7 +32,7 @@ class CuboRubick extends StatelessWidget {
 class _CuboRubik extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final double circleRadiusGrand = size.width / 4;
+    final double circleRadiusGrand = size.width < 700 ? 180 : size.width / 4;
     final paint = Paint();
 
     //Propiedades

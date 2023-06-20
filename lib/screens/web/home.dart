@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:portafolio_virtual/provider/changeapp.dart';
 import '../../background/background.dart';
@@ -15,27 +13,30 @@ class HomeWeb extends StatelessWidget {
     final sized = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          BarraDeNavegacion(controller: changeApp.controllerSideNav),
-          SizedBox(
-              width: sized.width * 0.934,
-              height: sized.height,
+      child: SizedBox(
+        width: sized.width,
+        height: Responsive.of(context).hm(100),
+        child: Row(
+          children: [
+            BarraDeNavegacion(controller: changeApp.controllerSideNav),
+            Expanded(
               child: Background(
+                changeApp: changeApp,
                 body: Padding(
-                  padding: EdgeInsets.only(left: sized.width * 0.1),
+                  padding: EdgeInsets.only(
+                    left: Responsive.of(context).wp(6),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Hello! I\´ m\nHéctor Puga',
                           style: TextStyle(
-                              fontSize: Responsive.of(context).wp(7),
+                              fontSize: Responsive.of(context).dp(6),
                               color: Colors.black,
                               fontWeight: FontWeight.bold)),
                       SizedBox(
-                        height: sized.height * 0.05,
+                        height: Responsive.of(context).hp(3),
                       ),
                       ElevatedButton(
                         onPressed: () {},
@@ -44,8 +45,10 @@ class HomeWeb extends StatelessWidget {
                     ],
                   ),
                 ),
-              )),
-        ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
