@@ -4,5 +4,10 @@ import 'package:sidebarx/sidebarx.dart';
 class ChangeApp extends ChangeNotifier {
   final _controller = SidebarXController(selectedIndex: 0, extended: false);
 
-  get controllerSideNav => _controller;
+  SidebarXController get controllerSideNav => _controller;
+
+  set selectIndex(int i) {
+    _controller.selectIndex(i);
+    notifyListeners();
+  }
 }

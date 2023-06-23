@@ -45,17 +45,17 @@ class BarraDeNavegacion extends StatelessWidget {
                 child: Image.asset("assets/proyectos.png")),
             label: 'Proyectos',
             onTap: () {
-              _controller.selectIndex(2);
-
               print(_controller.selectedIndex);
             }),
         SidebarXItem(
-          iconWidget: SizedBox(
-              height: 30,
-              width: 30,
-              child: Image.asset("assets/tecnologias.png")),
-          label: 'Tecnologias',
-        ),
+            iconWidget: SizedBox(
+                height: 30,
+                width: 30,
+                child: Image.asset("assets/tecnologias.png")),
+            label: 'Tecnologias',
+            onTap: () {
+              print(_controller.selectedIndex);
+            }),
         SidebarXItem(
           iconWidget: SizedBox(
               height: 30,
