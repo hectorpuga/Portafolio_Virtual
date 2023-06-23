@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:portafolio_virtual/provider/changeapp.dart';
 import '../../background/background.dart';
 import '../../utils/responsive.dart';
@@ -17,6 +18,7 @@ class HomeWeb extends StatelessWidget {
         width: sized.width,
         height: Responsive.of(context).hm(100),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             BarraDeNavegacion(controller: changeApp.controllerSideNav),
             Expanded(
@@ -24,29 +26,42 @@ class HomeWeb extends StatelessWidget {
                 changeApp: changeApp,
                 body: Padding(
                   padding: EdgeInsets.only(
-                    left: Responsive.of(context).wp(6),
+                    left: Responsive.of(context).wp(5),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Hello! I\´ m\nHéctor Puga',
-                          style: TextStyle(
-                              fontSize: Responsive.of(context).dp(6),
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold)),
-                      SizedBox(
-                        height: Responsive.of(context).hp(3),
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: const Text("Contactame"),
-                      )
-                    ],
+                  child: SingleChildScrollView(
+                    physics: const NeverScrollableScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Hello! I\´ m\nHéctor Puga',
+                                style: TextStyle(
+                                    fontSize: Responsive.of(context).wp(7),
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: Responsive.of(context).hp(3),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              child: const Text("Contactame"),
+                            )
+                          ],
+                        ),
+                        SizedBox(width: Responsive.of(context).wp(8)),
+                        SvgPicture.asset("assets/home.svg",
+                            width: Responsive.of(context).wp(23),
+                            fit: BoxFit.cover,
+                            semanticsLabel: 'A red up arrow')
+                      ],
+                    ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -10,7 +10,8 @@ class Responsive {
     final size = MediaQuery.of(context).size;
     _width = size.width;
     _height = size.height;
-    _diagonal = math.sqrt(math.pow(_width!, 2) + math.pow(_height! < 600 ? 600:_height!, 2));
+    _diagonal = math.sqrt(
+        math.pow(_width!, 2) + math.pow(_height! < 600 ? 600 : _height!, 2));
   }
 
   double wp(double percent) => _width! * percent / 100;
@@ -20,5 +21,5 @@ class Responsive {
   double dp(double percent) => _diagonal! * percent / 100;
 
   double? hm(double percent) =>
-      _height! < 600 ? 600 * percent / 100 : (_height! * percent / 100);
+      _height! < 400 ? 400 * percent / 100 : (_height! * percent / 100);
 }

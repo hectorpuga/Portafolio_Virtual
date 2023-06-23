@@ -24,84 +24,84 @@ class Background extends StatelessWidget {
 
     return Stack(
       children: [
-        CuboRubick(
-            Responsive.of(context).dp(21), Responsive.of(context).hm(60)!),
-        CuboRubick(
-            Responsive.of(context).wp(70), Responsive.of(context).hm(23)!),
-        Estrella(Responsive.of(context).wp(5), Responsive.of(context).hm(90)!),
-        Estrella(Responsive.of(context).wp(48), Responsive.of(context).hm(30)!),
-        Triangulo(
-            Offset(
-              Responsive.of(context).wp(20),
-              Responsive.of(context).hm(80)!,
-            ),
-            Responsive.of(context).dp(4)),
-        Triangulo(
-          Offset(
-            Responsive.of(context).wp(35),
-            Responsive.of(context).hm(85)!,
-          ),
-          Responsive.of(context).dp(8),
-          fill: false,
-          giro: 2.84,
-          strokewith: 14,
-        ),
-        Triangulo(
-          Offset(
-            Responsive.of(context).wp(27),
-            Responsive.of(context).hm(18)!,
-          ),
-          Responsive.of(context).dp(4),
-          fill: false,
-          giro: 2.8,
-          strokewith: 8,
-        ),
-        TrianguloDos(),
+        // CuboRubick(
+        //     Responsive.of(context).dp(21), Responsive.of(context).hm(60)!),
+        // CuboRubick(
+        //     Responsive.of(context).wp(70), Responsive.of(context).hm(23)!),
+        // Estrella(Responsive.of(context).wp(5), Responsive.of(context).hm(90)!),
+        // Estrella(Responsive.of(context).wp(48), Responsive.of(context).hm(30)!),
+        // Triangulo(
+        //     Offset(
+        //       Responsive.of(context).wp(20),
+        //       Responsive.of(context).hm(80)!,
+        //     ),
+        //     Responsive.of(context).dp(4)),
         // Triangulo(
         //   Offset(
-        //     Responsive.of(context).wp(80),
-        //     Responsive.of(context).hm(28)!,
+        //     Responsive.of(context).wp(35),
+        //     Responsive.of(context).hm(85)!,
         //   ),
-        //   Responsive.of(context).wp(30),
-        //   giro: 0.5,
+        //   Responsive.of(context).dp(8),
+        //   fill: false,
+        //   giro: 2.84,
+        //   strokewith: 14,
+        // ),
+        // Triangulo(
+        //   Offset(
+        //     Responsive.of(context).wp(27),
+        //     Responsive.of(context).hm(18)!,
+        //   ),
+        //   Responsive.of(context).dp(4),
+        //   fill: false,
+        //   giro: 2.8,
         //   strokewith: 8,
         // ),
-        Triangulo(
-          Offset(
-            Responsive.of(context).wp(50),
-            Responsive.of(context).hm(-4)!,
-          ),
-          Responsive.of(context).dp(5),
-          giro: 0.04997,
-          fill: false,
-          strokewith: 5,
-        ),
-        Circulos(
-          posicion: Offset(
-              Responsive.of(context).wp(80), Responsive.of(context).hm(13)!),
-          sizeCirculoGrand: Responsive.of(context).dp(3),
-          sizeCirculoSmall: Responsive.of(context).dp(2),
-        ),
-        Circulos(
-          posicion: Offset(
-              Responsive.of(context).wp(70), Responsive.of(context).hm(58)!),
-          sizeCirculoGrand: Responsive.of(context).dp(6),
-          sizeCirculoSmall: Responsive.of(context).dp(5),
-        ),
-        Circulos(
-          posicion: Offset(
-              Responsive.of(context).wp(88.7), Responsive.of(context).hm(94)!),
-          sizeCirculoGrand: Responsive.of(context).dp(5),
-          fill: true,
-          circulos: false,
-        ),
-        const PokeBall(),
-        const EsferaCuatroEstrellas(),
+        // TrianguloDos(),
+        // // Triangulo(
+        // //   Offset(
+        // //     Responsive.of(context).wp(80),
+        // //     Responsive.of(context).hm(28)!,
+        // //   ),
+        // //   Responsive.of(context).wp(30),
+        // //   giro: 0.5,
+        // //   strokewith: 8,
+        // // ),
+        // Triangulo(
+        //   Offset(
+        //     Responsive.of(context).wp(50),
+        //     Responsive.of(context).hm(-4)!,
+        //   ),
+        //   Responsive.of(context).dp(5),
+        //   giro: 0.04997,
+        //   fill: false,
+        //   strokewith: 5,
+        // ),
+        // Circulos(
+        //   posicion: Offset(
+        //       Responsive.of(context).wp(80), Responsive.of(context).hm(13)!),
+        //   sizeCirculoGrand: Responsive.of(context).dp(3),
+        //   sizeCirculoSmall: Responsive.of(context).dp(2),
+        // ),
+        // Circulos(
+        //   posicion: Offset(
+        //       Responsive.of(context).wp(70), Responsive.of(context).hm(58)!),
+        //   sizeCirculoGrand: Responsive.of(context).dp(6),
+        //   sizeCirculoSmall: Responsive.of(context).dp(5),
+        // ),
+        // Circulos(
+        //   posicion: Offset(
+        //       Responsive.of(context).wp(88.7), Responsive.of(context).hm(94)!),
+        //   sizeCirculoGrand: Responsive.of(context).dp(5),
+        //   fill: true,
+        //   circulos: false,
+        // ),
+        // const PokeBall(),
+        // const EsferaCuatroEstrellas(),
         body,
-        Triangulo(
-            Offset(
-                Responsive.of(context).wp(82), Responsive.of(context).hm(56)!),
-            Responsive.of(context).dp(7)),
+        // Triangulo(
+        //     Offset(
+        //         Responsive.of(context).wp(82), Responsive.of(context).hm(56)!),
+        //     Responsive.of(context).dp(7)),
         // Triangulo(
         //   Offset(
         //     Responsive.of(context).wp(59),
@@ -120,19 +120,19 @@ class Background extends StatelessWidget {
         //   sizeCirculoSmall: Responsive.of(context).dp(2.9),
         //   fill: true,
         // ),
-        Triangulo(
-            fill: false,
-            Offset(
-                Responsive.of(context).wp(56), Responsive.of(context).hm(40)!),
-            giro: 2.9,
-            strokewith: 7,
-            Responsive.of(context).dp(3)),
-        Circulos(
-          posicion: Offset(
-              Responsive.of(context).wp(54), Responsive.of(context).hm(93)!),
-          sizeCirculoGrand: Responsive.of(context).dp(1),
-          circulos: false,
-        ),
+        // Triangulo(
+        //     fill: false,
+        //     Offset(
+        //         Responsive.of(context).wp(56), Responsive.of(context).hm(40)!),
+        //     giro: 2.9,
+        //     strokewith: 7,
+        //     Responsive.of(context).dp(3)),
+        // Circulos(
+        //   posicion: Offset(
+        //       Responsive.of(context).wp(54), Responsive.of(context).hm(93)!),
+        //   sizeCirculoGrand: Responsive.of(context).dp(1),
+        //   circulos: false,
+        // ),
         // for (int j = 0; j < 3; j++)
         //   for (int i = 0; i < 3; i++)
         //     Circulos(

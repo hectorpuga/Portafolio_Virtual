@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final appTheme = ThemeData.light().copyWith(
+      scaffoldBackgroundColor: Color(0xFF10101A),
       textTheme: const TextTheme(
           titleLarge: TextStyle(
               fontSize: 70, color: Colors.black, fontWeight: FontWeight.bold),
