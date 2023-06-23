@@ -1,0 +1,19 @@
+{
+    "nombreApp":"Proyectos",
+    "proyectos":[
+        {
+        "name":"Ecommerce",
+        "description":"Globlin_Workshop es una tienda la cual se enfoca en la compra y venta de articulos navideños",
+        "img":"assets/img/proyectos/ecommerce.svg"
+    
+    },
+    {
+        "name":"Curetopia",
+        "description":"Curetopia es un juego de mundo abierot, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "img":"assets/img/proyectos/curetopia.svg"
+    
+    }
+    
+    ]
+
+}
