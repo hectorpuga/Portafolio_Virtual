@@ -9,8 +9,33 @@
     },
     {
         "name":"Curetopia",
-        "description":"Curetopia es un juego de mundo abierot, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
         "img":"assets/img/proyectos/curetopia.svg"
+    
+    },
+    {
+        "name":"Evaluación Docente",
+        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "img":"assets/img/proyectos/evaluacion-docente.svg"
+    
+    },
+    {
+        "name":"Veterinaria",
+        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "img":"assets/img/proyectos/veterinaria.svg"
+    
+    }
+    ,   {
+        "name":"Memorama",
+        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "img":"assets/img/proyectos/memorama.svg"
+    
+    },
+
+    {
+        "name":"Juego de mesa",
+        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "img":"assets/img/proyectos/juego_de_mesa.svg"
     
     }
     

@@ -14,50 +14,61 @@ class Proyectos extends StatelessWidget {
 
     return Expanded(
         child: GridView.builder(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.symmetric(
+                horizontal: Responsive.of(context).wp(4),
+                vertical: Responsive.of(context).hm(8)!),
             itemCount: info.opciones.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-            ),
-            itemBuilder: (context, i) => Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                childAspectRatio: 1.25,
+                crossAxisCount: 2,
+                crossAxisSpacing: Responsive.of(context).wp(5),
+                mainAxisSpacing: Responsive.of(context).hm(5)!),
+            itemBuilder: (context, i) => Container(
+                decoration: _createCardShape(),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
                   child: SingleChildScrollView(
-                    child: Container(
-                        decoration: _createCardShape(),
-                        child: Column(
-                          children: [
-                            Text(
-                              info.opciones[i]["name"],
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: Responsive.of(context).wp(3),
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            SvgPicture.asset(
-                              info.opciones[i]["img"],
-                              placeholderBuilder: (BuildContext context) =>
-                                  Image.asset("assets/loading.gif",
-                                      width: Responsive.of(context).wp(10),
-                                      fit: BoxFit.cover),
-                              width: Responsive.of(context).wp(25),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
+                    child: Column(
+                      children: [
+                        SvgPicture.asset(
+                          info.opciones[i]["img"],
+                          fit: BoxFit.fill,
+                          placeholderBuilder: (BuildContext context) =>
+                              Image.asset(
+                            "assets/loading.gif",
+                          ),
+                          width: Responsive.of(context).wp(40),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                info.opciones[i]["name"],
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: Responsive.of(context).wp(1.6)),
+                              ),
+                              Text(
                                 info.opciones[i]["description"],
+                                maxLines: 10,
+                                softWrap: true,
+                                overflow: TextOverflow.visible,
+                                textAlign: TextAlign.justify,
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: Responsive.of(context).wp(1.3)),
-                                textAlign: TextAlign.justify,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 10,
                               ),
-                            ),
-                          ],
-                        )),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
-                )));
+                ))));
   }
 
   BoxDecoration _createCardShape() {
