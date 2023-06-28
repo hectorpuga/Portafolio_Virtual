@@ -8,6 +8,7 @@ class Information extends ChangeNotifier {
   List<dynamic> mobile = [];
   List<dynamic> desktop = [];
   List all = [];
+  List tecnologias = [];
 
   Information() {
     cargarData();
@@ -21,6 +22,7 @@ class Information extends ChangeNotifier {
     web = dataMap['Web'];
     desktop = dataMap['Desktop'];
     mobile = dataMap['Mobile'];
+    tecnologias = dataMap['Tecnology'];
 
     all.addAll(web);
     all.addAll(desktop);

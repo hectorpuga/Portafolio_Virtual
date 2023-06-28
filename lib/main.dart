@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portafolio_virtual/provider/changeapp.dart';
+import 'package:portafolio_virtual/provider/contact.dart';
 import 'package:portafolio_virtual/provider/info.dart';
 import 'package:portafolio_virtual/screens/web/home.dart';
 import 'package:portafolio_virtual/screens/web/proyectos.dart';
@@ -25,6 +26,10 @@ class AppState extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => Information(),
+          lazy: false,
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ContactoForm(),
           lazy: false,
         ),
       ],

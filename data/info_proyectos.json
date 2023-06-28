@@ -1,5 +1,20 @@
 {
 
+    "Tecnology":[
+
+    {"name":"Dart",
+    "img":"assets/img/tecnologias/Dart.svg"},
+    {"name":"JavaScript",
+    "img":"assets/img/tecnologias/JavaScript.svg"},
+    {"name":"Java",
+    "img":"assets/img/tecnologias/Java.svg"},
+    {"name":"Flutter",
+    "img":"assets/img/tecnologias/Flutter.svg"}
+
+
+
+    ],
+
     "Mobile":[
         {
             "name":"Curetopia",

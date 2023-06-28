@@ -90,7 +90,8 @@ class CardWidgetProyect extends StatelessWidget {
                       placeholderBuilder: (BuildContext context) => Image.asset(
                         "assets/loading.gif",
                         fit: BoxFit.fill,
-                        height: Responsive.of(context).hm(40),
+                        height: Responsive.of(context).hm(20),
+                        width: Responsive.of(context).wp(30),
                       ),
                       width: Responsive.of(context).wp(40),
                     ),
