@@ -22,4 +22,7 @@ class Responsive {
 
   double? hm(double percent) =>
       _height! < 400 ? 400 * percent / 100 : (_height! * percent / 100);
+
+  double? wm(double percent) =>
+      _width! < 700 ? 700 * percent / 100 : (_width! * percent / 100);
 }

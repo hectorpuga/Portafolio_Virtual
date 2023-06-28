@@ -4,19 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class Information extends ChangeNotifier {
-  List<dynamic> opciones = [];
+  List<dynamic> web = [];
+  List<dynamic> mobile = [];
+  List<dynamic> desktop = [];
+  List all = [];
 
   Information() {
     cargarData();
   }
 
-  Future<List<dynamic>> cargarData() async {
+  cargarData() async {
     final resp = await rootBundle.loadString('data/info_proyectos.json');
 
     Map dataMap = json.decode(resp);
     //print(dataMap['nombreApp']);
-    opciones = dataMap['proyectos'];
+    web = dataMap['Web'];
+    desktop = dataMap['Desktop'];
+    mobile = dataMap['Mobile'];
 
-    return opciones;
+    all.addAll(web);
+    all.addAll(desktop);
+    all.addAll(mobile);
+    all.shuffle();
   }
 }

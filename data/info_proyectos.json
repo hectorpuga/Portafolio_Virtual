@@ -1,43 +1,52 @@
 {
-    "nombreApp":"Proyectos",
-    "proyectos":[
+
+    "Mobile":[
+        {
+            "name":"Curetopia",
+            "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+            "img":"assets/img/proyectos/curetopia.svg"
+        
+        }
+
+    ],
+    "Desktop":[
+
+        
+        {
+            "name":"Veterinaria",
+            "description":"Es un sitema de administración de datos, el cual permitira al usuario manipular y obtener la información de una manera rapida y eficiente",
+            "img":"assets/img/proyectos/veterinaria.svg"
+        
+        },
+        {
+            "name":"Memorama",
+            "description":"Un juego clasico el cual consiste en voltear dos cartas identicas en el menor tiempo posible, para asi formar multiples pares, hasta que todas la cartas se encuentre volteadas",
+            "img":"assets/img/proyectos/memorama.svg"
+        
+        },
+    
+        {
+            "name":"Juego de mesa",
+            "description":"Este es un juego de mesa el cual consiste en avanzar mediante un dado, a medida que avanzas te enfrentaras a los jefes de cada casilla, los cuales en este caso son los maestros, tendras que derrotarlos para poder ganar en el juego",
+            "img":"assets/img/proyectos/juego_de_mesa.svg"
+        
+        }
+    ],
+    "Web":[
         {
         "name":"Ecommerce",
         "description":"Globlin_Workshop es una tienda la cual se enfoca en la compra y venta de articulos navideños",
         "img":"assets/img/proyectos/ecommerce.svg"
     
     },
-    {
-        "name":"Curetopia",
-        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
-        "img":"assets/img/proyectos/curetopia.svg"
-    
-    },
+   
     {
         "name":"Evaluación Docente",
-        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
+        "description":"Pagina con el proposito de hacer una evaluación al personal docente del Tecnológico Superior de El Mante, mediante una preguntas relacionadas con su especialidad",
         "img":"assets/img/proyectos/evaluacion-docente.svg"
     
-    },
-    {
-        "name":"Veterinaria",
-        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
-        "img":"assets/img/proyectos/veterinaria.svg"
-    
     }
-    ,   {
-        "name":"Memorama",
-        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
-        "img":"assets/img/proyectos/memorama.svg"
     
-    },
-
-    {
-        "name":"Juego de mesa",
-        "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
-        "img":"assets/img/proyectos/juego_de_mesa.svg"
-    
-    }
     
     ]
 

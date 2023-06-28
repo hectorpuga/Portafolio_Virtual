@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../utils/responsive.dart';
+import 'contacto.dart';
 
 class HomeWeb extends StatelessWidget {
   const HomeWeb({super.key});
@@ -33,7 +34,9 @@ class HomeWeb extends StatelessWidget {
                       height: Responsive.of(context).hp(3),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _mostrarAlert(context);
+                      },
                       child: const Text("Contactame"),
                     )
                   ],
@@ -50,5 +53,22 @@ class HomeWeb extends StatelessWidget {
         )
                 .animate(delay: const Duration(milliseconds: 50))
                 .fade(duration: 1.seconds)));
+  }
+
+  void _mostrarAlert(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (context) {
+          return Center(
+            child: SingleChildScrollView(
+              child: AlertDialog(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                content: const Contacto(),
+              ),
+            ),
+          );
+        });
   }
 }
