@@ -1,3 +1,4 @@
+import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:portafolio_virtual/provider/changeapp.dart';
 import 'package:portafolio_virtual/provider/contacto.dart';
@@ -48,36 +49,51 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.appTheme,
         title: 'Portafolio Virtual',
-        home: Scaffold(
-          body: LayoutBuilder(builder: (context, constraints) {
-            if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
-              // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
+        home: FlutterSplashScreen.gif(
+          gifPath: 'assets/example.gif',
+          gifWidth: 269,
+          gifHeight: 474,
+          defaultNextScreen: Scaffold(
+            body: LayoutBuilder(builder: (context, constraints) {
+              if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
+                // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
 
-              return Container();
-            } else {
-              // Si el ancho máximo es igual o mayor a 600, se muestra el contenido normal
-              return AnimatedBuilder(
-                animation: changeApp.controllerSideNav,
-                builder: (context, child) {
-                  return SingleChildScrollView(
-                    child: SizedBox(
-                      width: Responsive.of(context).wp(100),
-                      height: Responsive.of(context).hm(100),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          BarraDeNavegacion(
-                              controller: changeApp.controllerSideNav),
-                          selectScreen(
-                              changeApp.controllerSideNav.selectedIndex)
-                        ],
+                return Container();
+              } else {
+                // Si el ancho máximo es igual o mayor a 600, se muestra el contenido normal
+                return AnimatedBuilder(
+                  animation: changeApp.controllerSideNav,
+                  builder: (context, child) {
+                    return SingleChildScrollView(
+                      child: SizedBox(
+                        width: Responsive.of(context).wp(100),
+                        height: Responsive.of(context).hm(100),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            BarraDeNavegacion(
+                                controller: changeApp.controllerSideNav),
+                            selectScreen(
+                                changeApp.controllerSideNav.selectedIndex)
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                },
-              );
-            }
-          }),
+                    );
+                  },
+                );
+              }
+            }),
+          ),
+          duration: const Duration(milliseconds: 3515),
+          onInit: () async {
+            debugPrint("onInit 1");
+            await Future.delayed(const Duration(milliseconds: 2000));
+            debugPrint("onInit 2");
+          },
+          onEnd: () async {
+            debugPrint("onEnd 1");
+            debugPrint("onEnd 2");
+          },
         ));
   }
 

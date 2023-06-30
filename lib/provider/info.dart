@@ -20,7 +20,7 @@ class Information extends ChangeNotifier {
     final resp = await rootBundle.loadString('data/info_proyectos.json');
 
     Map dataMap = json.decode(resp);
-    //print(dataMap['nombreApp']);
+
     web = dataMap['Web'];
     desktop = dataMap['Desktop'];
     mobile = dataMap['Mobile'];

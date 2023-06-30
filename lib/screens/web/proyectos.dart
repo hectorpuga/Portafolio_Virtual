@@ -1,4 +1,5 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
+import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portafolio_virtual/provider/info.dart';
@@ -73,65 +74,39 @@ class CardWidgetProyect extends StatelessWidget {
             vertical: Responsive.of(context).hm(8)!),
         itemCount: info.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 1.25,
+            childAspectRatio: 1.5,
             crossAxisCount: 2,
             crossAxisSpacing: Responsive.of(context).wp(3),
             mainAxisSpacing: Responsive.of(context).hm(5)!),
-        itemBuilder: (context, i) => Container(
-            decoration: _createCardShape(),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: SingleChildScrollView(
-                child: Column(
+        itemBuilder: (context, indexGrid) => ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Tooltip(
+                message: "Ver mas",
+                child: Stack(
                   children: [
-                    SvgPicture.asset(
-                      info[i]["img"],
-                      fit: BoxFit.fill,
-                      placeholderBuilder: (BuildContext context) => Image.asset(
-                        "assets/loading.gif",
-                        fit: BoxFit.fill,
-                        height: Responsive.of(context).wp(33),
-                      ),
-                      width: Responsive.of(context).wp(41),
+                    Swiper(
+                      autoplay: true,
+                      itemBuilder: (c, i) {
+                        return SvgPicture.asset(
+                          info[indexGrid]["img"][i],
+                          fit: BoxFit.fill,
+                          placeholderBuilder: (BuildContext context) =>
+                              Image.asset(
+                            "assets/loading.gif",
+                            fit: BoxFit.fill,
+                            height: Responsive.of(context).wp(33),
+                          ),
+                          width: Responsive.of(context).wp(41),
+                        );
+                      },
+                      pagination:
+                          SwiperPagination(margin: EdgeInsets.all(10.0)),
+                      itemCount: info[indexGrid]["img"].length,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            info[i]["name"],
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: Responsive.of(context).wp(1.6)),
-                          ),
-                          Text(
-                            info[i]["description"],
-                            maxLines: 10,
-                            softWrap: true,
-                            overflow: TextOverflow.visible,
-                            textAlign: TextAlign.justify,
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: Responsive.of(context).wp(1.3)),
-                          ),
-                        ],
-                      ),
-                    )
+                    Text(info[indexGrid]["name"])
                   ],
                 ),
               ),
-            )));
-  }
-
-  BoxDecoration _createCardShape() {
-    return BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: const [
-          BoxShadow(color: Colors.black12, blurRadius: 15, offset: Offset(0, 5))
-        ]);
+            ));
   }
 }

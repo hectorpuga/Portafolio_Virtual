@@ -31,37 +31,47 @@ class BarraDeNavegacion extends StatelessWidget {
       ),
       items: [
         SidebarXItem(
-          iconWidget: SizedBox(
-              height: 30, width: 30, child: Image.asset("assets/inicio.png")),
+          iconWidget: Tooltip(
+            message: "Home",
+            child: SizedBox(
+                height: 30, width: 30, child: Image.asset("assets/inicio.png")),
+          ),
           label: 'Inicio',
           onTap: () {
             debugPrint('Home');
           },
         ),
         SidebarXItem(
-            iconWidget: SizedBox(
-                height: 30,
-                width: 30,
-                child: Image.asset("assets/proyectos.png")),
+            iconWidget: Tooltip(
+              message: "Proyectos",
+              child: SizedBox(
+                  height: 30,
+                  width: 30,
+                  child: Image.asset("assets/proyectos.png")),
+            ),
             label: 'Proyectos',
-            onTap: () {
-              print(_controller.selectedIndex);
-            }),
+            onTap: () {}),
         SidebarXItem(
-            iconWidget: SizedBox(
+            iconWidget: Tooltip(
+              message: "Tecnologias",
+              child: SizedBox(
+                  height: 30,
+                  width: 30,
+                  child: Image.asset("assets/tecnologias.png")),
+            ),
+            label: 'Tecnologias',
+            onTap: () {}),
+        SidebarXItem(
+          iconWidget: Tooltip(
+            // preferBelow: false,
+            // verticalOffset: -18,
+            message: "Acerca de mi",
+            child: SizedBox(
                 height: 30,
                 width: 30,
-                child: Image.asset("assets/tecnologias.png")),
-            label: 'Tecnologias',
-            onTap: () {
-              print(_controller.selectedIndex);
-            }),
-        SidebarXItem(
-          iconWidget: SizedBox(
-              height: 30,
-              width: 30,
-              child: Image.asset("assets/acerca_de_mi.png")),
-          label: 'Acerca demi',
+                child: Image.asset("assets/acerca_de_mi.png")),
+          ),
+          label: 'Acerca de mi',
         ),
       ],
     );

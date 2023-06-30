@@ -19,13 +19,21 @@
     "Herramientas":[
 
         {"name":"Bash",
-        "img":"assets/img/tecnologias/bash.svg"},
+        "img":"assets/img/tecnologias/git-bash.svg"},
         {"name":"git",
-        "img":"assets/img/tecnologias/github.svg"},
-        {"name":"Java",
+        "img":"assets/img/tecnologias/git.svg"},
+        {"name":"Git",
         "img":"assets/img/tecnologias/postman.svg"},
         {"name":"c#",
-        "img":"assets/img/tecnologias/visual-studio-code.svg"}
+        "img":"assets/img/tecnologias/visual-studio-code.svg"},
+        {"name":"Figma",
+        "img":"assets/img/tecnologias/figma.svg"},
+        {"name":"Nodejs",
+        "img":"assets/img/tecnologias/node-js.svg"},
+        {"name":"Vim",
+        "img":"assets/img/tecnologias/vim.svg"}
+       
+       
     
     
     
@@ -33,17 +41,28 @@
 
     "Frameworks":[
 
-        {"name":"Nodejs",
-        "img":"assets/img/tecnologias/express.svg"}
+        {"name":"Express",
+        "img":"assets/img/tecnologias/express.svg"},
+        {"name":"SpringBoot",
+        "img":"assets/img/tecnologias/spring.svg"},
+
+        {"name":"React",
+        "img":"assets/img/tecnologias/react.svg"},
+        {"name":"Flutter",
+        "img":"assets/img/tecnologias/flutter.svg"}
        
-    
+       
         ],
     
     "Mobile":[
         {
             "name":"Curetopia",
             "description":"Curetopia es un juego de mundo abierto, que consiste en detectar personajes con carencias de atributos, para mejorarlos",
-            "img":"assets/img/proyectos/curetopia.svg"
+            "img":[
+                "assets/img/proyectos/curetopia.svg",
+"assets/img/proyectos/curetopia2.svg",
+"assets/img/proyectos/curetopia3.svg"
+            ]
         
         }
 
@@ -54,20 +73,20 @@
         {
             "name":"Veterinaria",
             "description":"Es un sitema de administración de datos, el cual permitira al usuario manipular y obtener la información de una manera rapida y eficiente",
-            "img":"assets/img/proyectos/veterinaria.svg"
+            "img":["assets/img/proyectos/veterinaria.svg","assets/img/proyectos/veterinaria2.svg","assets/img/proyectos/veterinaria3.svg","assets/img/proyectos/veterinaria4.svg"]
         
         },
         {
             "name":"Memorama",
             "description":"Un juego clasico el cual consiste en voltear dos cartas identicas en el menor tiempo posible, para asi formar multiples pares, hasta que todas la cartas se encuentre volteadas",
-            "img":"assets/img/proyectos/memorama.svg"
+            "img":["assets/img/proyectos/memorama.svg","assets/img/proyectos/memorama2.svg","assets/img/proyectos/memorama3.svg","assets/img/proyectos/memorama4.svg"]
         
         },
     
         {
             "name":"Juego de mesa",
             "description":"Este es un juego de mesa el cual consiste en avanzar mediante un dado, a medida que avanzas te enfrentaras a los jefes de cada casilla, los cuales en este caso son los maestros, tendras que derrotarlos para poder ganar en el juego",
-            "img":"assets/img/proyectos/juego_de_mesa.svg"
+            "img":["assets/img/proyectos/juego_de_mesa.svg","assets/img/proyectos/juego_de_mesa2.svg","assets/img/proyectos/juego_de_mesa3.svg","assets/img/proyectos/juego_de_mesa4.svg"]
         
         }
     ],
@@ -75,18 +94,19 @@
         {
         "name":"Ecommerce",
         "description":"Globlin_Workshop es una tienda la cual se enfoca en la compra y venta de articulos navideños",
-        "img":"assets/img/proyectos/ecommerce.svg"
+        "img":["assets/img/proyectos/ecommerce.svg","assets/img/proyectos/ecommerce2.svg","assets/img/proyectos/ecommerce3.svg","assets/img/proyectos/ecommerce4.svg"]
     
     },
    
     {
         "name":"Evaluación Docente",
         "description":"Pagina con el proposito de hacer una evaluación al personal docente del Tecnológico Superior de El Mante, mediante una preguntas relacionadas con su especialidad",
-        "img":"assets/img/proyectos/evaluacion-docente.svg"
+        "img":["assets/img/proyectos/evaluacion-docente.svg","assets/img/proyectos/evaluacion-docente2.svg","assets/img/proyectos/evaluacion-docente3.svg"]
     
     }
     
     
     ]
+    
 
 }

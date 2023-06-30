@@ -71,30 +71,15 @@ class CardWidgetTecnology extends StatelessWidget {
             vertical: Responsive.of(context).hm(8)!),
         itemCount: info.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 1.25,
+            childAspectRatio: 2,
             crossAxisCount: 3,
-            crossAxisSpacing: Responsive.of(context).wp(5),
-            mainAxisSpacing: Responsive.of(context).hm(5)!),
-        itemBuilder: (context, i) => ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(
-                    sigmaX: 10, sigmaY: 10, tileMode: TileMode.repeated),
-                child: Container(
-                  height: 180,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: SvgPicture.asset(
-                    info[i]["img"],
-                    placeholderBuilder: (BuildContext context) => Image.asset(
-                      "assets/loading.gif",
-                      fit: BoxFit.fill,
-                      height: Responsive.of(context).wp(25),
-                      width: Responsive.of(context).wp(25),
-                    ),
-                  ),
-                ),
+            crossAxisSpacing: Responsive.of(context).wp(2),
+            mainAxisSpacing: Responsive.of(context).hm(1)!),
+        itemBuilder: (context, i) => SvgPicture.asset(
+              info[i]["img"],
+              placeholderBuilder: (BuildContext context) => Image.asset(
+                "assets/loading.gif",
+                fit: BoxFit.fill,
               ),
             ));
   }
