@@ -7,6 +7,7 @@ class Email extends ChangeNotifier {
         Uri.https('deploy-api-portafolio.onrender.com', 'api/usuarios/email');
     var response = await http
         .post(url, body: {"email": email, "name": name, "message": message});
-    print('Response status: ${response.statusCode}');
+
+    return response.statusCode;
   }
 }

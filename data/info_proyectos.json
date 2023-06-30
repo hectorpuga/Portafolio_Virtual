@@ -1,20 +1,44 @@
 {
 
-    "Tecnology":[
+    "Lenguajes":[
 
     {"name":"Dart",
-    "img":"assets/img/tecnologias/Dart.svg"},
+    "img":"assets/img/tecnologias/dart.svg"},
     {"name":"JavaScript",
-    "img":"assets/img/tecnologias/JavaScript.svg"},
+    "img":"assets/img/tecnologias/javascript.svg"},
     {"name":"Java",
-    "img":"assets/img/tecnologias/Java.svg"},
-    {"name":"Flutter",
-    "img":"assets/img/tecnologias/Flutter.svg"}
+    "img":"assets/img/tecnologias/java.svg"},
+    {"name":"c#",
+    "img":"assets/img/tecnologias/c#.svg"}
 
 
 
     ],
 
+
+    "Herramientas":[
+
+        {"name":"Bash",
+        "img":"assets/img/tecnologias/bash.svg"},
+        {"name":"git",
+        "img":"assets/img/tecnologias/github.svg"},
+        {"name":"Java",
+        "img":"assets/img/tecnologias/postman.svg"},
+        {"name":"c#",
+        "img":"assets/img/tecnologias/visual-studio-code.svg"}
+    
+    
+    
+        ],
+
+    "Frameworks":[
+
+        {"name":"Nodejs",
+        "img":"assets/img/tecnologias/express.svg"}
+       
+    
+        ],
+    
     "Mobile":[
         {
             "name":"Curetopia",

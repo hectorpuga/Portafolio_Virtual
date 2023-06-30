@@ -19,12 +19,12 @@ class Proyectos extends StatelessWidget {
         child: DefaultTabController(
           length: 4,
           child: Column(
-            children: <Widget>[
+            children: [
               ButtonsTabBar(
-                contentPadding: EdgeInsets.symmetric(horizontal: 40),
-                backgroundColor: Colors.red,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 40),
+                backgroundColor: const Color(0xFF3E3E61),
                 unselectedBackgroundColor: Colors.grey[300],
-                unselectedLabelStyle: TextStyle(color: Colors.black),
+                unselectedLabelStyle: const TextStyle(color: Colors.black),
                 labelStyle: const TextStyle(
                     color: Colors.white, fontWeight: FontWeight.bold),
                 tabs: const [
@@ -75,7 +75,7 @@ class CardWidgetProyect extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             childAspectRatio: 1.25,
             crossAxisCount: 2,
-            crossAxisSpacing: Responsive.of(context).wp(5),
+            crossAxisSpacing: Responsive.of(context).wp(3),
             mainAxisSpacing: Responsive.of(context).hm(5)!),
         itemBuilder: (context, i) => Container(
             decoration: _createCardShape(),
@@ -90,10 +90,9 @@ class CardWidgetProyect extends StatelessWidget {
                       placeholderBuilder: (BuildContext context) => Image.asset(
                         "assets/loading.gif",
                         fit: BoxFit.fill,
-                        height: Responsive.of(context).hm(20),
-                        width: Responsive.of(context).wp(30),
+                        height: Responsive.of(context).wp(33),
                       ),
-                      width: Responsive.of(context).wp(40),
+                      width: Responsive.of(context).wp(41),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
