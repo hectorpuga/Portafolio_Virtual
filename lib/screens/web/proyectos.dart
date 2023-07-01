@@ -1,5 +1,6 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:card_swiper/card_swiper.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portafolio_virtual/provider/info.dart';
@@ -68,6 +69,8 @@ class CardWidgetProyect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final info2 = Provider.of<Information>(context);
+
     return GridView.builder(
         padding: EdgeInsets.symmetric(
             horizontal: Responsive.of(context).wp(4),
@@ -78,32 +81,37 @@ class CardWidgetProyect extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: Responsive.of(context).wp(3),
             mainAxisSpacing: Responsive.of(context).hm(5)!),
-        itemBuilder: (context, indexGrid) => ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Tooltip(
-                message: "Ver mas",
+        itemBuilder: (context, indexGrid) => GestureDetector(
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                onEnter: (PointerEnterEvent event) {
+                  info2.isText = indexGrid;
+                },
+                onExit: (event) {
+                  info2.isText = -1;
+                },
                 child: Stack(
                   children: [
-                    Swiper(
-                      autoplay: true,
-                      itemBuilder: (c, i) {
-                        return SvgPicture.asset(
-                          info[indexGrid]["img"][i],
-                          fit: BoxFit.fill,
-                          placeholderBuilder: (BuildContext context) =>
-                              Image.asset(
-                            "assets/loading.gif",
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Swiper(
+                        onTap: (value) {
+                          print("HOla");
+                        },
+                        autoplay: true,
+                        itemBuilder: (c, i) {
+                          return SvgPicture.asset(
+                            info[indexGrid]["img"][i],
                             fit: BoxFit.fill,
-                            height: Responsive.of(context).wp(33),
-                          ),
-                          width: Responsive.of(context).wp(41),
-                        );
-                      },
-                      pagination:
-                          SwiperPagination(margin: EdgeInsets.all(10.0)),
-                      itemCount: info[indexGrid]["img"].length,
+                            width: Responsive.of(context).wp(41),
+                          );
+                        },
+                        pagination: const SwiperPagination(
+                            margin: EdgeInsets.all(10.0)),
+                        itemCount: info[indexGrid]["img"].length,
+                      ),
                     ),
-                    Text(info[indexGrid]["name"])
+                    if (info2.isText == indexGrid) Center(child: Text("Hola"))
                   ],
                 ),
               ),

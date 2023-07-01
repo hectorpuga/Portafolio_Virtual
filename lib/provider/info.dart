@@ -12,8 +12,16 @@ class Information extends ChangeNotifier {
   List frameworks = [];
   List herramientas = [];
 
+  int _isText = -1;
+
   Information() {
     cargarData();
+  }
+
+  int get isText => _isText;
+  set isText(int value) {
+    _isText = value;
+    notifyListeners();
   }
 
   cargarData() async {
