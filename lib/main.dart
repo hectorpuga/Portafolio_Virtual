@@ -11,6 +11,7 @@ import 'package:portafolio_virtual/theme/themeapp.dart';
 import 'package:portafolio_virtual/utils/responsive.dart';
 import 'package:portafolio_virtual/widgets/barra_navegacion.dart';
 import 'package:provider/provider.dart';
+import 'package:zoom_pinch_overlay/zoom_pinch_overlay.dart';
 
 void main() => runApp(const AppState());
 
@@ -19,23 +20,20 @@ class AppState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (_) => ChangeApp(),
-          lazy: false,
-        ),
-        ChangeNotifierProvider(
-          create: (_) => Information(),
-          lazy: false,
-        ),
-        ChangeNotifierProvider(
-          create: (_) => ContactoFormProvider(),
-          lazy: false,
-        ),
-      ],
-      child: const MyApp(),
-    );
+    return MultiProvider(providers: [
+      ChangeNotifierProvider(
+        create: (_) => ChangeApp(),
+        lazy: false,
+      ),
+      ChangeNotifierProvider(
+        create: (_) => Information(),
+        lazy: false,
+      ),
+      ChangeNotifierProvider(
+        create: (_) => ContactoFormProvider(),
+        lazy: false,
+      ),
+    ], child: const MyApp());
   }
 }
 
@@ -53,36 +51,49 @@ class MyApp extends StatelessWidget {
           gifPath: 'assets/example.gif',
           gifWidth: 269,
           gifHeight: 474,
-          defaultNextScreen: Scaffold(
-            body: LayoutBuilder(builder: (context, constraints) {
-              if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
-                // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
+          defaultNextScreen: ZoomOverlay(
+            modalBarrierColor: Colors.black12, // Optional
+            minScale: 0.5, // Optional
+            maxScale: 3.0, // Optional
+            animationCurve: Curves
+                .fastOutSlowIn, // Defaults to fastOutSlowIn which mimics IOS instagram behavior
+            animationDuration: const Duration(
+                milliseconds:
+                    300), // Defaults to 100 Milliseconds. Recommended duration is 300 milliseconds for Curves.fastOutSlowIn
+            twoTouchOnly: true, // Defaults to false
+            onScaleStart: () {}, // optional VoidCallback
+            onScaleStop: () {}, //
+            child: Scaffold(
+              body: LayoutBuilder(builder: (context, constraints) {
+                if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
+                  // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
 
-                return Container();
-              } else {
-                // Si el ancho máximo es igual o mayor a 600, se muestra el contenido normal
-                return AnimatedBuilder(
-                  animation: changeApp.controllerSideNav,
-                  builder: (context, child) {
-                    return SingleChildScrollView(
-                      child: SizedBox(
-                        width: Responsive.of(context).wp(100),
-                        height: Responsive.of(context).hm(100),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            BarraDeNavegacion(
-                                controller: changeApp.controllerSideNav),
-                            selectScreen(
-                                changeApp.controllerSideNav.selectedIndex)
-                          ],
+                  return Container();
+                } else {
+                  // Si el ancho máximo es igual o mayor a 600, se muestra el contenido normal
+                  return AnimatedBuilder(
+                    animation: changeApp.controllerSideNav,
+                    builder: (context, child) {
+                      return SingleChildScrollView(
+                        child: SizedBox(
+                          width: Responsive.of(context).wp(100),
+                          height: Responsive.of(context).hm(100),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              BarraDeNavegacion(
+                                  controller: changeApp.controllerSideNav),
+                              selectScreen(
+                                  changeApp.controllerSideNav.selectedIndex)
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  },
-                );
-              }
-            }),
+                      );
+                    },
+                  );
+                }
+              }),
+            ),
           ),
           duration: const Duration(milliseconds: 3515),
           onInit: () async {

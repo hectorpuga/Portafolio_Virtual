@@ -95,9 +95,7 @@ class CardWidgetProyect extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Swiper(
-                        onTap: (value) {
-                          print("HOla");
-                        },
+                        onTap: (value) {},
                         autoplay: true,
                         itemBuilder: (c, i) {
                           return SvgPicture.asset(
@@ -111,7 +109,32 @@ class CardWidgetProyect extends StatelessWidget {
                         itemCount: info[indexGrid]["img"].length,
                       ),
                     ),
-                    if (info2.isText == indexGrid) Center(child: Text("Hola"))
+                    if (info2.isText == indexGrid)
+                      const Center(
+                        child: Text("Ver mas",
+                            style: TextStyle(color: Colors.indigo)),
+                      ),
+                    if (info2.isText == indexGrid)
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  height: Responsive.of(context).hm(5),
+                                  decoration: BoxDecoration(
+                                      color: Colors.lightBlueAccent,
+                                      borderRadius: BorderRadius.circular(8)),
+                                  child: Center(
+                                    child: Text(info[indexGrid]["name"],
+                                        style: const TextStyle(
+                                            color: Colors.black)),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ])
                   ],
                 ),
               ),
