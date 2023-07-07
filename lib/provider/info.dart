@@ -13,6 +13,7 @@ class Information extends ChangeNotifier {
   List herramientas = [];
 
   int _isText = -1;
+  String acercademi = '';
 
   Information() {
     cargarData();
@@ -35,6 +36,8 @@ class Information extends ChangeNotifier {
     tecnologias = dataMap['Lenguajes'];
     frameworks = dataMap['Frameworks'];
     herramientas = dataMap['Herramientas'];
+
+    acercademi = dataMap['Acerca de mi'];
 
     all.addAll(web);
     all.addAll(desktop);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:portafolio_virtual/provider/contacto.dart';
-import 'package:portafolio_virtual/services/email.dart';
 import 'package:provider/provider.dart';
-
+import '../../services/email.dart';
 import '../../utils/responsive.dart';
 
 class Contacto extends StatelessWidget {
@@ -42,6 +42,7 @@ class Contacto extends StatelessWidget {
                     Text(camposText[i]["name"]),
                     const SizedBox(height: 10),
                     TextFormField(
+                      enabled: providerContacto.enableForm,
                       autovalidateMode: AutovalidateMode.onUserInteraction,
                       keyboardType: camposText[i]["keyboardType"],
                       maxLines: camposText[i]["maxline"],
@@ -62,16 +63,29 @@ class Contacto extends StatelessWidget {
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 const Color(0xFF3E3E61))),
-                        onPressed: () async {
-                          if (providerContacto.isValiForm()) {
-                            int data = await Email.setEmail(
-                                providerContacto.email,
-                                providerContacto.nombre,
-                                providerContacto.message);
-
-                            print(data);
-                          }
-                        },
+                        onPressed: providerContacto.enableForm
+                            ? () async {
+                                if (providerContacto.isValiForm()) {
+                                  providerContacto.enableForm = false;
+                                  EasyLoading.instance.loadingStyle =
+                                      EasyLoadingStyle.dark;
+                                  EasyLoading.show(
+                                    status: 'loading...',
+                                  );
+                                  await Email.setEmail(
+                                      providerContacto.email,
+                                      providerContacto.nombre,
+                                      providerContacto.message);
+                                  EasyLoading.instance.loadingStyle =
+                                      EasyLoadingStyle.custom;
+                                  await EasyLoading.showSuccess("Enviado",
+                                      duration: const Duration(seconds: 2));
+                                  providerContacto.enableForm = true;
+                                  // ignore: use_build_context_synchronously
+                                  Navigator.of(context).pop();
+                                }
+                              }
+                            : null,
                         child: Text(
                           "Enviar",
                           style: styleTextButtons,

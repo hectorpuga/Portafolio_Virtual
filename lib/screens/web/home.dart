@@ -58,16 +58,15 @@ class HomeWeb extends StatelessWidget {
   void _mostrarAlert(BuildContext context) {
     showDialog(
         context: context,
-        barrierDismissible: true,
+        barrierDismissible: false,
         builder: (context) {
-          return Center(
-            child: SingleChildScrollView(
-              child: AlertDialog(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                content: const Contacto(),
-              ),
-            ),
+          return AlertDialog(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            content: SizedBox(
+                width: Responsive.of(context).wm(40),
+                height: Responsive.of(context).hm(72),
+                child: const SingleChildScrollView(child: Contacto())),
           );
         });
   }

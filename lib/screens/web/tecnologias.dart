@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:portafolio_virtual/provider/info.dart';
 import 'package:provider/provider.dart';
 
@@ -38,6 +39,7 @@ class Tecnologias extends StatelessWidget {
                   ),
                   Tab(
                     text: "Herramientas",
+                    icon: Icon(LineIcons.tools),
                   ),
                 ],
               ),

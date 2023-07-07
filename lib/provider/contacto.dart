@@ -4,15 +4,21 @@ class ContactoFormProvider extends ChangeNotifier {
   String nombre = '';
   String email = '';
   String message = '';
+  bool _enableForm = true;
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   bool isValiForm() {
     bool v = formKey.currentState?.validate() ?? false;
 
-    if (v) formKey.currentState?.reset();
-
     return v;
+  }
+
+  bool get enableForm => _enableForm;
+
+  set enableForm(bool value) {
+    _enableForm = value;
+    notifyListeners();
   }
 
   bool getValidation(String validation, String? value) {
