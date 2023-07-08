@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
             if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
               // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
 
-              return const HomeApp();
+              return const HomeAppMain();
             } else {
               // Si el ancho máximo es igual o mayor a 600, se muestra el contenido normal
               return Scaffold(
@@ -115,14 +115,14 @@ class MyApp extends StatelessWidget {
   Widget selectScreen(int screen) {
     switch (screen) {
       case 0:
-        return const HomeWeb();
+        return const Expanded(child: HomeWeb());
       case 1:
-        return const Proyectos();
+        return const Expanded(child: Proyectos());
 
       case 2:
-        return const Tecnologias();
+        return const Expanded(child: Tecnologias());
       case 3:
-        return const SobreMi();
+        return const Expanded(child: SobreMi());
       default:
         return Container();
     }

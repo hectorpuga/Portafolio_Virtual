@@ -16,44 +16,43 @@ class Tecnologias extends StatelessWidget {
   Widget build(BuildContext context) {
     final info = Provider.of<Information>(context);
 
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30),
-        child: DefaultTabController(
-          length: 3,
-          child: Column(
-            children: <Widget>[
-              ButtonsTabBar(
-                contentPadding: EdgeInsets.symmetric(horizontal: 40),
-                backgroundColor: Colors.red,
-                unselectedBackgroundColor: Colors.grey[300],
-                unselectedLabelStyle: TextStyle(color: Colors.black),
-                labelStyle: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
-                tabs: const [
-                  Tab(
-                    text: "Lenguajes",
-                  ),
-                  Tab(
-                    text: "Frameworks",
-                  ),
-                  Tab(
-                    text: "Herramientas",
-                    icon: Icon(LineIcons.tools),
-                  ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: DefaultTabController(
+        length: 3,
+        child: Column(
+          children: <Widget>[
+            ButtonsTabBar(
+              contentPadding: EdgeInsets.symmetric(
+                  horizontal: Responsive.of(context).wm(3)!),
+              backgroundColor: Colors.red,
+              unselectedBackgroundColor: Colors.grey[300],
+              unselectedLabelStyle: const TextStyle(color: Colors.black),
+              labelStyle: const TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.bold),
+              tabs: const [
+                Tab(
+                  text: "Lenguajes",
+                ),
+                Tab(
+                  text: "Frameworks",
+                ),
+                Tab(
+                  text: "Herramientas",
+                  icon: Icon(LineIcons.tools),
+                ),
+              ],
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  CardWidgetTecnology(info: info.tecnologias),
+                  CardWidgetTecnology(info: info.frameworks),
+                  CardWidgetTecnology(info: info.herramientas),
                 ],
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    CardWidgetTecnology(info: info.tecnologias),
-                    CardWidgetTecnology(info: info.frameworks),
-                    CardWidgetTecnology(info: info.herramientas),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -74,7 +73,7 @@ class CardWidgetTecnology extends StatelessWidget {
         itemCount: info.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             childAspectRatio: 2,
-            crossAxisCount: 3,
+            crossAxisCount: Responsive.of(context).wp(100) < 600 ? 1 : 3,
             crossAxisSpacing: Responsive.of(context).wp(2),
             mainAxisSpacing: Responsive.of(context).hm(1)!),
         itemBuilder: (context, i) => SvgPicture.asset(

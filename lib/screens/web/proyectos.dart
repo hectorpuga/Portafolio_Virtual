@@ -12,7 +12,6 @@ import 'package:portafolio_virtual/screens/web/vermas.dart';
 import 'package:provider/provider.dart';
 
 import '../../utils/responsive.dart';
-import 'contacto.dart';
 
 class Proyectos extends StatelessWidget {
   const Proyectos({super.key});
@@ -21,51 +20,50 @@ class Proyectos extends StatelessWidget {
   Widget build(BuildContext context) {
     final info = Provider.of<Information>(context);
 
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30),
-        child: DefaultTabController(
-          length: 4,
-          child: Column(
-            children: [
-              ButtonsTabBar(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 40),
-                backgroundColor: const Color(0xFF3E3E61),
-                unselectedBackgroundColor: Colors.grey[300],
-                unselectedLabelStyle: const TextStyle(color: Colors.black),
-                labelStyle: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
-                tabs: const [
-                  Tab(
-                    text: "  All  ",
-                    icon: Icon(LineIcons.github),
-                  ),
-                  Tab(
-                    text: "Mobile",
-                    icon: Icon(LineIcons.mobilePhone, size: 17),
-                  ),
-                  Tab(
-                    text: "Desktop",
-                    icon: Icon(LineIcons.desktop),
-                  ),
-                  Tab(
-                    text: "Web",
-                    icon: Icon(LineIcons.chrome),
-                  ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: DefaultTabController(
+        length: 4,
+        child: Column(
+          children: [
+            ButtonsTabBar(
+              contentPadding: EdgeInsets.symmetric(
+                  horizontal: Responsive.of(context).wm(3)!),
+              backgroundColor: const Color(0xFF3E3E61),
+              unselectedBackgroundColor: Colors.grey[300],
+              unselectedLabelStyle: const TextStyle(color: Colors.black),
+              labelStyle: const TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.bold),
+              tabs: const [
+                Tab(
+                  text: "  All  ",
+                  icon: Icon(LineIcons.github),
+                ),
+                Tab(
+                  text: "Mobile",
+                  icon: Icon(LineIcons.mobilePhone, size: 17),
+                ),
+                Tab(
+                  text: "Desktop",
+                  icon: Icon(LineIcons.desktop),
+                ),
+                Tab(
+                  text: "Web",
+                  icon: Icon(LineIcons.chrome),
+                ),
+              ],
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  CardWidgetProyect(info: info.all),
+                  CardWidgetProyect(info: info.mobile),
+                  CardWidgetProyect(info: info.desktop),
+                  CardWidgetProyect(info: info.web),
                 ],
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    CardWidgetProyect(info: info.all),
-                    CardWidgetProyect(info: info.mobile),
-                    CardWidgetProyect(info: info.desktop),
-                    CardWidgetProyect(info: info.web),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -89,7 +87,7 @@ class CardWidgetProyect extends StatelessWidget {
         itemCount: info.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             childAspectRatio: 1.5,
-            crossAxisCount: 2,
+            crossAxisCount: Responsive.of(context).wp(100) < 600 ? 1 : 3,
             crossAxisSpacing: Responsive.of(context).wp(3),
             mainAxisSpacing: Responsive.of(context).hm(5)!),
         itemBuilder: (context, indexGrid) {

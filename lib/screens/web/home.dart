@@ -11,8 +11,7 @@ class HomeWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     return Animate(
         effects: const [FadeEffect(), ScaleEffect()],
-        child: Expanded(
-            child: Padding(
+        child: Padding(
           padding: EdgeInsets.only(
             left: Responsive.of(context).wp(5),
           ),
@@ -51,8 +50,8 @@ class HomeWeb extends StatelessWidget {
             ),
           ),
         )
-                .animate(delay: const Duration(milliseconds: 50))
-                .fade(duration: 1.seconds)));
+            .animate(delay: const Duration(milliseconds: 50))
+            .fade(duration: 1.seconds));
   }
 
   void _mostrarAlert(BuildContext context) {
@@ -64,8 +63,7 @@ class HomeWeb extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             content: SizedBox(
-                width: Responsive.of(context).wm(40),
-                height: Responsive.of(context).hm(72),
+                width: Responsive.of(context).wm(30),
                 child: const SingleChildScrollView(child: Contacto())),
           );
         });
