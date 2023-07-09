@@ -11,7 +11,6 @@ final divider = Divider(color: white.withOpacity(0.3), height: 1);
 
 class ThemeNavigationBarra {
   static final buttonNavigation = SidebarXTheme(
-    margin: const EdgeInsets.all(10),
     decoration: BoxDecoration(
       color: canvasColor,
       borderRadius: BorderRadius.circular(20),

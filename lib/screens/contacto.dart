@@ -2,16 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:portafolio_virtual/provider/contacto.dart';
 import 'package:provider/provider.dart';
-import '../../services/email.dart';
-import '../../utils/responsive.dart';
+import '../services/email.dart';
+import '../utils/responsive.dart';
 
 class Contacto extends StatelessWidget {
   const Contacto({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final sized = MediaQuery.of(context).size;
-
     final providerContacto = Provider.of<ContactoFormProvider>(context);
     List camposText = providerContacto.getCamposForm();
     TextStyle styleTextButtons = TextStyle(

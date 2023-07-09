@@ -1,20 +1,15 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:portafolio_virtual/provider/changeapp.dart';
-import 'package:portafolio_virtual/provider/contacto.dart';
-import 'package:portafolio_virtual/provider/info.dart';
 import 'package:portafolio_virtual/screens/app/home.dart';
+import 'package:portafolio_virtual/screens/screens.dart';
 import 'package:portafolio_virtual/screens/web/home.dart';
-import 'package:portafolio_virtual/screens/web/proyectos.dart';
-import 'package:portafolio_virtual/screens/web/sobremi.dart';
-import 'package:portafolio_virtual/screens/web/tecnologias.dart';
 import 'package:portafolio_virtual/theme/themeapp.dart';
-import 'package:portafolio_virtual/utils/responsive.dart';
 import 'package:portafolio_virtual/widgets/barra_navegacion.dart';
 import 'package:provider/provider.dart';
 
 import 'custom_animation.dart';
+import 'provider/provider.dart';
 
 void main() {
   runApp(const AppState());
@@ -77,7 +72,7 @@ class MyApp extends StatelessWidget {
         gifHeight: 474,
         defaultNextScreen: LayoutBuilder(
           builder: (context, constraints) {
-            if (constraints.maxWidth < 600 || constraints.maxHeight < 300) {
+            if (constraints.maxWidth < 600 && constraints.maxHeight != 300) {
               // Si el ancho máximo es menor a 600, se muestra un mensaje de tamaño mínimo
 
               return const HomeAppMain();

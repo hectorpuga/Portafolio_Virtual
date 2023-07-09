@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../utils/responsive.dart';
-import 'contacto.dart';
+import '../contacto.dart';
 
 class HomeWeb extends StatelessWidget {
   const HomeWeb({super.key});

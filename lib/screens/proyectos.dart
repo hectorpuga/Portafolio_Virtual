@@ -8,10 +8,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:portafolio_virtual/provider/changeapp.dart';
 import 'package:portafolio_virtual/provider/info.dart';
-import 'package:portafolio_virtual/screens/web/vermas.dart';
+import 'package:portafolio_virtual/screens/vermas.dart';
 import 'package:provider/provider.dart';
 
-import '../../utils/responsive.dart';
+import '../utils/responsive.dart';
 
 class Proyectos extends StatelessWidget {
   const Proyectos({super.key});
@@ -28,7 +28,7 @@ class Proyectos extends StatelessWidget {
           children: [
             ButtonsTabBar(
               contentPadding: EdgeInsets.symmetric(
-                  horizontal: Responsive.of(context).wm(3)!),
+                  horizontal: Responsive.of(context).wm(1)!),
               backgroundColor: const Color(0xFF3E3E61),
               unselectedBackgroundColor: Colors.grey[300],
               unselectedLabelStyle: const TextStyle(color: Colors.black),
@@ -172,7 +172,6 @@ class CardWidgetProyect extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 content: SizedBox(
                   width: Responsive.of(context).wm(40),
-                  height: Responsive.of(context).hm(70),
                   child: SingleChildScrollView(
                     child: VerMas(
                       info: info,

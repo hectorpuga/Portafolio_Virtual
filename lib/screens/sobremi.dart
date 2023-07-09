@@ -4,7 +4,7 @@ import 'package:portafolio_virtual/utils/responsive.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../provider/info.dart';
+import '../provider/info.dart';
 
 class SobreMi extends StatelessWidget {
   const SobreMi({super.key});

@@ -2,14 +2,10 @@ import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:portafolio_virtual/screens/web/proyectos.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/changeapp.dart';
-import '../../utils/responsive.dart';
-import '../web/contacto.dart';
-import '../web/sobremi.dart';
-import '../web/tecnologias.dart';
+import '../screens.dart';
 
 class HomeAppMain extends StatelessWidget {
   const HomeAppMain({super.key});
@@ -19,7 +15,7 @@ class HomeAppMain extends StatelessWidget {
     final changeApp = Provider.of<ChangeApp>(context);
     return Scaffold(
         bottomNavigationBar: DotNavigationBar(
-          backgroundColor: Color(0xFF2E2E48),
+          backgroundColor: const Color(0xFF2E2E48),
           enablePaddingAnimation: false,
           currentIndex: changeApp.selectOptionMovil,
 
@@ -28,41 +24,17 @@ class HomeAppMain extends StatelessWidget {
           },
           // dotIndicatorColor: Colors.black,
           items: [
-            /// Home
-            DotNavigationBarItem(
-              icon: SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: Image.asset("assets/inicio.png")),
-              selectedColor: Colors.transparent,
-            ),
+            for (int i = 0; i < changeApp.optionsMovil.length; i++)
+
+              /// Home
+              DotNavigationBarItem(
+                icon: SizedBox(
+                    width: Responsive.of(context).wm(4),
+                    child: Image.asset(changeApp.optionsMovil[i])),
+                selectedColor: Colors.transparent,
+              ),
 
             /// Likes
-            DotNavigationBarItem(
-              icon: SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: Image.asset("assets/proyectos.png")),
-              selectedColor: Colors.pink,
-            ),
-
-            /// Search
-            DotNavigationBarItem(
-              icon: SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: Image.asset("assets/tecnologias.png")),
-              selectedColor: Colors.orange,
-            ),
-
-            /// Profile
-            DotNavigationBarItem(
-              icon: SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: Image.asset("assets/acerca_de_mi.png")),
-              selectedColor: Colors.teal,
-            ),
           ],
         ),
         body: selectScreen(changeApp.selectOptionMovil));
@@ -71,12 +43,12 @@ class HomeAppMain extends StatelessWidget {
   Widget selectScreen(int screen) {
     switch (screen) {
       case 0:
-        return HomeApp();
+        return const HomeApp();
       case 1:
-        return Proyectos();
+        return const Proyectos();
 
       case 2:
-        return Tecnologias();
+        return const Tecnologias();
 
       case 3:
         return const SobreMi();
@@ -92,6 +64,8 @@ class HomeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final changeApp = Provider.of<ChangeApp>(context);
+
     return Animate(
         effects: const [FadeEffect(), ScaleEffect()],
         child: Center(
@@ -118,7 +92,7 @@ class HomeApp extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    _mostrarAlert(context);
+                    changeApp.mostrarAlert(context, const Contacto());
                   },
                   child: const Text("Contactame"),
                 )
@@ -128,20 +102,5 @@ class HomeApp extends StatelessWidget {
         )
             .animate(delay: const Duration(milliseconds: 50))
             .fade(duration: 1.seconds));
-  }
-
-  void _mostrarAlert(BuildContext context) {
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (context) {
-          return AlertDialog(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            content: SizedBox(
-                width: Responsive.of(context).wm(30),
-                child: const SingleChildScrollView(child: Contacto())),
-          );
-        });
   }
 }

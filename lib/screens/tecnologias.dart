@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,7 +5,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:portafolio_virtual/provider/info.dart';
 import 'package:provider/provider.dart';
 
-import '../../utils/responsive.dart';
+import '../utils/responsive.dart';
 
 class Tecnologias extends StatelessWidget {
   const Tecnologias({super.key});
@@ -24,7 +22,7 @@ class Tecnologias extends StatelessWidget {
           children: <Widget>[
             ButtonsTabBar(
               contentPadding: EdgeInsets.symmetric(
-                  horizontal: Responsive.of(context).wm(3)!),
+                  horizontal: Responsive.of(context).wm(1)!),
               backgroundColor: Colors.red,
               unselectedBackgroundColor: Colors.grey[300],
               unselectedLabelStyle: const TextStyle(color: Colors.black),

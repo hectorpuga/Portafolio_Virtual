@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
 import '../theme/themebarra.dart';
+import '../utils/responsive.dart';
 
 class BarraDeNavegacion extends StatelessWidget {
   const BarraDeNavegacion({
@@ -18,10 +19,12 @@ class BarraDeNavegacion extends StatelessWidget {
 
     return SidebarX(
       controller: _controller,
-      theme: ThemeNavigationBarra.buttonNavigation,
-      extendedTheme: const SidebarXTheme(
+      theme: ThemeNavigationBarra.buttonNavigation.copyWith(
+        margin: EdgeInsets.symmetric(vertical: Responsive.of(context).hm(10)!),
+      ),
+      extendedTheme: SidebarXTheme(
         width: 180,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: canvasColor,
         ),
       ),
