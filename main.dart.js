@@ -78194,7 +78194,8 @@ default:return A.cy(s,s,B.n,s,s,s,s,s,s,s,s,s,s,s)}}}
 A.a8O.prototype={
 $2(a,b){var s,r=null
 if(b.b<600&&b.d!==300)return B.FE
-else{s=this.b
+else{window.location.reload()
+s=this.b
 return A.Al(r,A.es(s.a,new A.a8N(this.a,s),r,r),r)}},
 $S:463}
 A.a8N.prototype={
