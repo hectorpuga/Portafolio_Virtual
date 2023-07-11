@@ -23397,9 +23397,11 @@ a_R:function a_R(){},
 a_S:function a_S(){},
 a_T:function a_T(){},
 Mg:function Mg(a){this.a=a},
-a8O:function a8O(a,b,c){this.a=a
-this.b=b
-this.c=c},
+a8O:function a8O(a,b,c,d){var _=this
+_.a=a
+_.b=b
+_.c=c
+_.d=d},
 a8N:function a8N(a,b){this.a=a
 this.b=b},
 oc:function oc(a,b,c,d){var _=this
@@ -78183,13 +78185,15 @@ A.a_T.prototype={
 $1(a){return new A.og(new A.bw(null,t.am),$.aM())},
 $S:462}
 A.Mg.prototype={
-F(a){var s,r,q={},p=A.mX(a,t.y5)
-q.a=!1
-s=A.aG9()
-r=$.aBg()
-q=new A.xR(new A.Ly(new A.a8O(q,this,p),null),"assets/example.gif",269,474,B.P2,null)
-q.cy=B.wV
-return new A.yO(q,s,"Portafolio Virtual",r,!1,null)},
+F(a){var s,r,q,p={},o=A.mX(a,t.y5)
+p.a=!1
+s=window.navigator.userAgent
+s.toString
+r=A.aG9()
+q=$.aBg()
+s=new A.xR(new A.Ly(new A.a8O(p,this,s,o),null),"assets/example.gif",269,474,B.P2,null)
+s.cy=B.wV
+return new A.yO(s,r,"Portafolio Virtual",q,!1,null)},
 zq(a){var s=null
 switch(a){case 0:return B.Fb
 case 1:return B.F8
@@ -78202,12 +78206,12 @@ if(b.b<600&&b.d>500){s=A.bM(a,p,t.w).w
 A.w_(s.glv(s)===B.dR)
 return B.FE}else{s=t.w
 r=A.bM(a,p,s).w
-if(r.glv(r)===B.dR)q.a.a=!0
+if(r.glv(r)===B.dR&&B.b.B(q.c,"Mobile"))q.a.a=!0
 r=q.a
 if(r.a){s=A.bM(a,p,s).w
 s=s.glv(s)===B.f5}else s=!1
 if(s){window.location.reload()
-r.a=!1}s=q.c
+r.a=!1}s=q.d
 return A.Am(p,A.es(s.a,new A.a8N(q.b,s),p,p),p)}},
 $S:463}
 A.a8N.prototype={
