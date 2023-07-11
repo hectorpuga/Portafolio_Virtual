@@ -78200,16 +78200,14 @@ A.a8O.prototype={
 $2(a,b){var s,r,q=this,p=null
 if(b.b<600&&b.d>500){s=A.bM(a,p,t.w).w
 A.w_(s.glv(s)===B.dR)
-return B.FE}else{s=window.navigator.userAgent
-s.toString
-if(B.b.B(s,"Mobile")){s=A.bM(a,p,t.w).w
-s=s.glv(s)===B.dR}else s=!1
-if(s)q.a.a=!0
-s=q.a
-if(s.a){r=A.bM(a,p,t.w).w
-r=r.glv(r)===B.f5}else r=!1
-if(r){window.location.reload()
-s.a=!1}s=q.c
+return B.FE}else{s=t.w
+r=A.bM(a,p,s).w
+if(r.glv(r)===B.dR)q.a.a=!0
+r=q.a
+if(r.a){s=A.bM(a,p,s).w
+s=s.glv(s)===B.f5}else s=!1
+if(s){window.location.reload()
+r.a=!1}s=q.c
 return A.Am(p,A.es(s.a,new A.a8N(q.b,s),p,p),p)}},
 $S:463}
 A.a8N.prototype={
