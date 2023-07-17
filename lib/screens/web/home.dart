@@ -24,7 +24,7 @@ class HomeWeb extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Hello! I\´ m\nHéctor Puga',
+                    Text('Hello! I´ m\nHéctor Puga',
                         style: TextStyle(
                             fontSize: Responsive.of(context).wp(7),
                             color: Colors.white,

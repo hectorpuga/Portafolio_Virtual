@@ -81,7 +81,7 @@ class HomeApp extends StatelessWidget {
                   width: Responsive.of(context).wp(50),
                   fit: BoxFit.cover,
                 ),
-                Text('Hello! I\´ m\nHéctor Puga',
+                Text('Hello! I´ m\nHéctor Puga',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: Responsive.of(context).wp(7),

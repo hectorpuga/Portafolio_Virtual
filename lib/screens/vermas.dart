@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../utils/responsive.dart';
 
@@ -24,13 +25,13 @@ class VerMas extends StatelessWidget {
         ),
         Text(
           info['description'],
-          style: TextStyle(fontWeight: FontWeight.normal),
+          style: const TextStyle(fontWeight: FontWeight.normal),
           textAlign: TextAlign.justify,
         ),
         SizedBox(
           height: Responsive.of(context).hm(2),
         ),
-        Text("Tecnologias"),
+        const Text("Tecnologias"),
         SizedBox(
           height: Responsive.of(context).hm(2),
         ),
@@ -49,7 +50,13 @@ class VerMas extends StatelessWidget {
         SizedBox(
           height: Responsive.of(context).hm(7),
           width: Responsive.of(context).wm(50),
-          child: ElevatedButton(onPressed: () {}, child: Text("Github")),
+          child: ElevatedButton(
+              child: const Text("Github"),
+              onPressed: () async {
+                if (!await launchUrl(Uri.parse(info['Github']))) {
+                  throw Exception('Could not launch ');
+                }
+              }),
         )
       ],
     );

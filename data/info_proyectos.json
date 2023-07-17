@@ -1,5 +1,5 @@
 {
-    "Acerca de mi": " Soy un desarrollador Junior en el área de backend, dedicado y autodidacta, dispuesto a aprender cualquier tecnología necesaria para satisfacer las demandas de proyectos. Estoy comprometido en mejorar constantemente mis habilidades y conocimientos con el objtivo de brindar soluciones efectivas y de calidad",
+    "Acerca de mi": "Soy estudiante de ingeniería en sistemas computacionales en el Instituto Tecnológico Superior de El Mante, con experiencia en bases de datos, programación web, sistemas operativos y desarrollo multiplataforma. Me considero autodidacta y mi compromiso es mejorar constantemente mis habilidades para ofrecer soluciones efectivas y de calidad.",
     "Lenguajes": [
         {
             "name": "Dart",
@@ -52,11 +52,8 @@
         {
             "name": "Express",
             "img": "assets/img/tecnologias/express.svg"
-        },
-        {
-            "name": "SpringBoot",
-            "img": "assets/img/tecnologias/spring.svg"
-        },
+        }
+   ,
         {
             "name": "React",
             "img": "assets/img/tecnologias/react.svg"
@@ -81,7 +78,8 @@
                 "assets/logos/javascript.svg"
 
             ],
-            "tecnologias_name":["Flutter","NodeJs","JavaScirpt"]
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt"],
+            "Github":"https://github.com/hectorpuga/Curetopia_Game"
 
         }
     ],
@@ -96,7 +94,9 @@
                 "assets/img/proyectos/veterinaria4.svg"
             ],
             "tecnologias_img": ["assets/logos/java.svg","assets/logos/mysql.svg"],
-            "tecnologias_name":["Java","Mysql"]
+            "tecnologias_name":["Java","Mysql"],
+            "Github":"https://github.com/hectorpuga/Sistema_Veterinaria_Desktop"
+
 
         },
         {
@@ -109,7 +109,9 @@
                 "assets/img/proyectos/memorama4.svg"
             ],
             "tecnologias_img": ["assets/logos/java.svg"],
-            "tecnologias_name":["Java"]
+            "tecnologias_name":["Java"],
+            "Github":"https://github.com/hectorpuga/Memorama_Desktop"
+
 
         },
         {
@@ -122,14 +124,15 @@
                 "assets/img/proyectos/juego_de_mesa4.svg"
             ],
             "tecnologias_img": ["assets/logos/java.svg"],
-            "tecnologias_name":["Java"]
+            "tecnologias_name":["Java"],
+            "Github":"https://github.com/hectorpuga/Juego_De_Mesa_Impact"
 
         }
     ],
     "Web": [
         {
             "name": "Ecommerce",
-            "description": "Globlin_Workshop es una tienda la cual se enfoca en la compra y venta de articulos navideños",
+            "description": "Globlin_Workshop es una tienda la cual se enfoca en la compra y venta de articulos navideños, tiene como proposito darle facilidad a los usuarios de hacer compras virtuales de articulos navideños",
             "img": [
                 "assets/img/proyectos/ecommerce.svg",
                 "assets/img/proyectos/ecommerce2.svg",
@@ -144,12 +147,13 @@
 
 
             ],
-            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","mysql"]
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","mysql"],
+            "Github":"https://github.com/hectorpuga/Ecommerce_GoblinWorkshop_Front_End.git"
 
         },
         {
             "name": "Evaluación Docente",
-            "description": "Pagina con el proposito de hacer una evaluación al personal docente del Tecnológico Superior de El Mante, mediante una preguntas relacionadas con su especialidad",
+            "description": "Pagina con el proposito de hacer una evaluación al personal docente del Tecnológico Superior de El Mante, mediante una preguntas relacionadas con su especialidad de materia",
             "img": [
                 "assets/img/proyectos/evaluacion-docente.svg",
                 "assets/img/proyectos/evaluacion-docente2.svg",
@@ -163,7 +167,8 @@
 
 
             ],
-            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","MongoDB"]
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","MongoDB"],
+            "Github":"https://github.com/hectorpuga/Evaluacion_docente"
 
 
         }

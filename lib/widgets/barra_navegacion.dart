@@ -22,9 +22,9 @@ class BarraDeNavegacion extends StatelessWidget {
       theme: ThemeNavigationBarra.buttonNavigation.copyWith(
         margin: EdgeInsets.symmetric(vertical: Responsive.of(context).hm(10)!),
       ),
-      extendedTheme: SidebarXTheme(
+      extendedTheme: const SidebarXTheme(
         width: 180,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: canvasColor,
         ),
       ),
@@ -40,9 +40,7 @@ class BarraDeNavegacion extends StatelessWidget {
                 height: 30, width: 30, child: Image.asset("assets/inicio.png")),
           ),
           label: 'Inicio',
-          onTap: () {
-            debugPrint('Home');
-          },
+          onTap: () {},
         ),
         SidebarXItem(
             iconWidget: Tooltip(

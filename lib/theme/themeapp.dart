@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final appTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: Color(0xFF10101A),
+    scaffoldBackgroundColor: const Color(0xFF10101A),
     textTheme: const TextTheme(
         headlineLarge: TextStyle(
             fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold),
@@ -35,7 +35,7 @@ class AppTheme {
         bodySmall: TextStyle(color: Colors.black)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-      backgroundColor: Color(0xFF2E2E4D),
+      backgroundColor: const Color(0xFF2E2E4D),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       minimumSize: const Size(150, 50),
     )),

@@ -118,6 +118,11 @@ class CardWidgetProyect extends StatelessWidget {
                         itemBuilder: (c, i) {
                           return SvgPicture.asset(
                             info[indexGrid]["img"][i],
+                            placeholderBuilder: (BuildContext context) =>
+                                Image.asset(
+                              "assets/loading.gif",
+                              fit: BoxFit.fill,
+                            ),
                             fit: BoxFit.fill,
                             width: Responsive.of(context).wp(41),
                           );
