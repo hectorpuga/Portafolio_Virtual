@@ -81,6 +81,72 @@
             "tecnologias_name":["Flutter","NodeJs","JavaScirpt"],
             "Github":"https://github.com/hectorpuga/Curetopia_Game"
 
+        },
+        {
+            "name": "Ecompost",
+            "description": "Es una aplicación con el proposito de registrar compostas, para que asi los usuarios puedan ubicarlas mediante un mapa para tirar sus desechos organicos",
+            "img": [
+                "assets/img/proyectos/ecompost.svg",
+                "assets/img/proyectos/ecompost2.svg",
+                "assets/img/proyectos/ecompost3.svg",
+                "assets/img/proyectos/ecompost4.svg"
+
+            ],
+            "tecnologias_img": [
+                "assets/logos/flutter.svg",
+                "assets/logos/node-js.svg",
+                "assets/logos/javascript.svg",
+                "assets/logos/mongodb.svg"
+
+
+            ],
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","MongoDB"],
+            "Github":"https://github.com/hectorpuga/Ecompost.git"
+
+        },
+        {
+            "name": "QuickShop",
+            "description": "QuickShop es una aplicación con el proposito a ayudar a las tiendas chicas a llevar un control facil y seguro de los datos que manipulan como precios de productos, gasto total y ganancias.",
+            "img": [
+                "assets/img/proyectos/tienda.svg",
+                "assets/img/proyectos/tienda2.svg",
+                "assets/img/proyectos/tienda3.svg",
+                "assets/img/proyectos/tienda4.svg"
+
+            ],
+            "tecnologias_img": [
+                "assets/logos/flutter.svg",
+                "assets/logos/node-js.svg",
+                "assets/logos/javascript.svg",
+                "assets/logos/mongodb.svg"
+
+
+            ],
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","MongoDB"],
+            "Github":"https://github.com/hectorpuga/Proyecto-de-ingenieria-de-software-AppTienda-.gist"
+
+        },
+        {
+            "name": "JuegoCurso",
+            "description": "Es un juego el cual fue creado en un curso de codigo facilito, dicho juego presentaba multiples errores (Sprites, logica y responsividad), dichos erroes fueron corregidos y adaptados a la version mas actual de flutter.",
+            "img": [
+                "assets/img/proyectos/juegocurso.svg",
+                "assets/img/proyectos/juegocurso2.svg",
+                "assets/img/proyectos/juegocurso3.svg",
+                "assets/img/proyectos/juegocurso4.svg"
+
+            ],
+            "tecnologias_img": [
+                "assets/logos/flutter.svg",
+                "assets/logos/node-js.svg",
+                "assets/logos/javascript.svg",
+                "assets/logos/mongodb.svg"
+
+
+            ],
+            "tecnologias_name":["Flutter","NodeJs","JavaScirpt","MongoDB"],
+            "Github":"https://github.com/hectorpuga/Juego_Curso_Flame_Flutter.git"
+
         }
     ],
     "Desktop": [
